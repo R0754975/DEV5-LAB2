@@ -25,6 +25,7 @@ export default class Card {
     let card = document.createElement("div");
     card.dataset.number = counter + 1;
     card.classList.add("bingo__card");
+    card.innerHTML = `<div class="bingo__card--title">${this.title}</div>`;
     card.setAttribute("id", `bingo__card${counter}`);
     document.querySelector(".bingo__board").appendChild(card);
     // don't forget to append the child to to DOM
