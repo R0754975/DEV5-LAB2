@@ -68,7 +68,7 @@ export default class Bingo {
     // 🔥🔥🔥 TODO 6
     // count all cards that are marked as done (select done items and count them with .length)
     let cardsDone = document.querySelectorAll(".bingo__card--done").length;
-    if (cardsDone.length === 5) {
+    if (cardsDone === 5) {
       // show the animated gif to the winner
       document.querySelector(".bingo__overlay").style.display = "block";
     }
@@ -94,6 +94,7 @@ export default class Bingo {
 
     // save a selection like [1, 7, 8] to localstorage item "bingo"
     // you might want to check out how JSON.stringify() works
+    localStorage.setItem("bingo", JSON.stringify(cardsWon));
 
   }
 
