@@ -12,7 +12,11 @@ export default class Card {
     // 🔥🔥🔥 TODO 5: mark or unmark (toggle) a bingo card when clicked
     console.log("Marking card as done");
     console.log(target);
-    target.classList.toggle("bingo__card--done");
+    if(target.classList.contains("bingo__card--title")) {
+      target.parentElement.classList.toggle("bingo__card--done");
+    } else {
+      target.classList.toggle("bingo__card--done");
+    }
     // hint: use class .bingo__card--done
   }
 
